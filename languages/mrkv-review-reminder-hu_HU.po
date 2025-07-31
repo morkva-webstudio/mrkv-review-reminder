@@ -2,129 +2,214 @@ msgid ""
 msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: hu_HU\n"
+"Language-Team: Hungarian\n"
+"PO-Revision-Date: 2025-07-31 05:49+0000\n"
+"X-Generator: Loco https://localise.biz/"
 
+#: classes/woocommerce/mrkv-review-reminder-woo-order.php:122
+#: classes/woocommerce/mrkv-review-reminder-woo-order.php:156
 msgid "Actions"
 msgstr "Műveletek"
 
+#: classes/woocommerce/mrkv-review-reminder-woo-order.php:99
+#: classes/woocommerce/mrkv-review-reminder-woo-orders.php:88
+#: classes/reminder/mrkv-review-reminder-sender.php:101
+#: classes/settings/admin/mrkv-review-reminder-admin-assets.php:36
 msgid "Already sent"
 msgstr "Már elküldve"
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:34
 msgid "Basic"
 msgstr "Alap"
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:117
 msgid "Basic settings"
 msgstr "Alapbeállítások"
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:177
+msgid "Button text (Default: Leave review)"
+msgstr "Gomb szövege (Alapértelmezett: Hagyjon értékelést)"
+
+#: templates/settings/template-mrkv-review-reminder-settings.php:134
 msgid "Create a message that will be sent"
 msgstr "Üzenet létrehozása, amely elküldésre kerül"
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:35
 msgid "Debug"
 msgstr "Hibakeresés"
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:200
 msgid "Debug Settings"
 msgstr "Hibakeresési beállítások"
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:238
 msgid "E-mail"
 msgstr "E-mail"
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:132
 msgid "Email configurations"
 msgstr "E-mail konfigurációk"
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:187
 msgid "Email header"
 msgstr "E-mail fejléc"
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:143
 msgid "Email subject"
 msgstr "E-mail tárgya"
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:195
 msgid "Email text"
 msgstr "E-mail szövege"
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:205
 msgid "Enable log to order note"
 msgstr "Napló engedélyezése a rendelési megjegyzéshez"
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:167
 msgid "Enter email..."
 msgstr "E-mail cím megadása..."
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:187
 msgid "Enter header..."
 msgstr "Fejléc megadása..."
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:177
+msgid "Enter text..."
+msgstr "Írja be a szöveget..."
+
+#: templates/settings/template-mrkv-review-reminder-settings.php:195
 msgid "Enter the email..."
 msgstr "Adja meg az e-mail címet..."
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:154
 msgid "Enter the sender..."
 msgstr "Adja meg a feladót..."
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:143
 msgid "Enter the subject..."
 msgstr "Adja meg a tárgyat..."
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:152
+#: templates/settings/template-mrkv-review-reminder-settings.php:165
 msgid "From WooCommerce email settings"
 msgstr "WooCommerce e-mail beállításokból"
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:12
 msgid "Global"
 msgstr "Globális"
 
-msgid "MRKV Review Reminder"
-msgstr "MRKV Értékelési Emlékeztető"
+#. URI of the plugin
+msgid "https://morkva.co.ua/product-category/plugins/"
+msgstr "https://morkva.co.ua/product-category/plugins/"
 
+#: classes/reminder/mrkv-review-reminder-sender.php:211
+msgid "Leave review"
+msgstr "Hagyjon értékelést"
+
+#. Author of the plugin
+msgid "MORKVA"
+msgstr "MORKVA"
+
+#. Name of the plugin
+#: classes/woocommerce/mrkv-review-reminder-woo-order.php:81
 msgid "Morkva Review Reminder"
 msgstr "Morkva Értékelési Emlékeztető"
 
+#: classes/settings/admin/mrkv-review-reminder-menu.php:37
+msgid "MRKV Review Reminder"
+msgstr "MRKV Értékelési Emlékeztető"
+
+#: templates/settings/template-mrkv-review-reminder-settings.php:237
 msgid "Need help or customization?"
 msgstr "Segítségre vagy testreszabásra van szüksége?"
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:193
 msgid "Plain text, no html"
 msgstr "Egyszerű szöveg, HTML nélkül"
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:126
 msgid "Reminder interval, days"
 msgstr "Emlékeztető intervallum, napok"
 
+#: classes/woocommerce/mrkv-review-reminder-woo-order.php:148
 msgid "Remove reminder"
 msgstr "Emlékeztető eltávolítása"
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:165
 msgid "Reply-to"
 msgstr "Válasz"
 
+#: classes/woocommerce/mrkv-review-reminder-woo-order.php:126
 msgid "Resend reminder"
 msgstr "Emlékeztető újraküldése"
 
-msgid "Review Reminder"
-msgstr "Értékelési Emlékeztető"
-
+#: classes/reminder/mrkv-review-reminder-sender.php:66
+#: classes/reminder/mrkv-review-reminder-sender.php:111
 msgid "Review recently purchased products"
 msgstr "Értékeld a nemrég vásárolt termékeket"
 
+#: classes/woocommerce/mrkv-review-reminder-woo-orders.php:39
+msgid "Review Reminder"
+msgstr "Értékelési Emlékeztető"
+
+#: templates/settings/template-mrkv-review-reminder-settings.php:228
 msgid "Save"
 msgstr "Mentés"
 
+#: classes/woocommerce/mrkv-review-reminder-woo-order.php:138
+#: classes/woocommerce/mrkv-review-reminder-woo-orders.php:100
 msgid "Scheduled on:"
 msgstr "Ütemezve:"
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:218
 msgid "Send"
 msgstr "Küldés"
 
-msgid "Send a test email to the specified email. The product will be taken the last one published"
-msgstr "Küldjön teszt e-mailt a megadott címre. A termék az utolsó közzétett lesz."
+#: templates/settings/template-mrkv-review-reminder-settings.php:211
+msgid ""
+"Send a test email to the specified email. The product will be taken the last "
+"one published"
+msgstr ""
+"Küldjön teszt e-mailt a megadott címre. A termék az utolsó közzétett lesz."
 
+#: classes/woocommerce/mrkv-review-reminder-woo-order.php:144
+#: classes/woocommerce/mrkv-review-reminder-woo-order.php:160
+#: classes/woocommerce/mrkv-review-reminder-woo-orders.php:104
+#: classes/woocommerce/mrkv-review-reminder-woo-orders.php:118
+#: classes/reminder/mrkv-review-reminder-sender.php:42
 msgid "Send now"
 msgstr "Küldés most"
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:152
 msgid "Sender name"
 msgstr "Feladó neve"
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:222
 msgid "Sent"
 msgstr "Elküldve"
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:29
 msgid "Settings"
 msgstr "Beállítások"
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:141
 msgid "Shortcode firstname: [mrkv-firstname]"
 msgstr "Rövidkód keresztnév: [mrkv-firstname]"
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:236
 msgid "Support"
 msgstr "Támogatás"
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:214
 msgid "Test Email address"
 msgstr "Teszt e-mail cím"
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:209
 msgid "Test letter"
 msgstr "Tesztlevél"
+
+#. Description of the plugin
+msgid "We send simple emails to remind you of your review"
+msgstr "Egyszerű e-maileket küldünk, hogy emlékeztessük értékelésére"

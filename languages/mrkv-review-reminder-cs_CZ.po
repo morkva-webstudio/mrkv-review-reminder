@@ -2,129 +2,215 @@ msgid ""
 msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : ((n>=2 && n<=4) ? 1 : 2);\n"
+"Language: cs_CZ\n"
+"Language-Team: Czech\n"
+"PO-Revision-Date: 2025-07-31 05:38+0000\n"
+"X-Generator: Loco https://localise.biz/"
 
+#: classes/woocommerce/mrkv-review-reminder-woo-order.php:122
+#: classes/woocommerce/mrkv-review-reminder-woo-order.php:156
 msgid "Actions"
 msgstr "Akce"
 
+#: classes/woocommerce/mrkv-review-reminder-woo-order.php:99
+#: classes/woocommerce/mrkv-review-reminder-woo-orders.php:88
+#: classes/reminder/mrkv-review-reminder-sender.php:101
+#: classes/settings/admin/mrkv-review-reminder-admin-assets.php:36
 msgid "Already sent"
 msgstr "Již odesláno"
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:34
 msgid "Basic"
 msgstr "Základní"
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:117
 msgid "Basic settings"
 msgstr "Základní nastavení"
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:177
+msgid "Button text (Default: Leave review)"
+msgstr "Text tlačítka (výchozí: Zanechat recenzi)"
+
+#: templates/settings/template-mrkv-review-reminder-settings.php:134
 msgid "Create a message that will be sent"
 msgstr "Vytvořit zprávu, která bude odeslána"
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:35
 msgid "Debug"
 msgstr "Ladění"
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:200
 msgid "Debug Settings"
 msgstr "Nastavení ladění"
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:238
 msgid "E-mail"
 msgstr "E-mail"
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:132
 msgid "Email configurations"
 msgstr "Konfigurace e-mailu"
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:187
 msgid "Email header"
 msgstr "Záhlaví e-mailu"
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:143
 msgid "Email subject"
 msgstr "Předmět e-mailu"
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:195
 msgid "Email text"
 msgstr "Text e-mailu"
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:205
 msgid "Enable log to order note"
 msgstr "Povolit záznam do poznámky k objednávce"
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:167
 msgid "Enter email..."
 msgstr "Zadejte e-mail..."
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:187
 msgid "Enter header..."
 msgstr "Zadejte záhlaví..."
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:177
+msgid "Enter text..."
+msgstr "Zadejte text..."
+
+#: templates/settings/template-mrkv-review-reminder-settings.php:195
 msgid "Enter the email..."
 msgstr "Zadejte e-mail..."
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:154
 msgid "Enter the sender..."
 msgstr "Zadejte odesílatele..."
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:143
 msgid "Enter the subject..."
 msgstr "Zadejte předmět..."
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:152
+#: templates/settings/template-mrkv-review-reminder-settings.php:165
 msgid "From WooCommerce email settings"
 msgstr "Z nastavení e-mailu WooCommerce"
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:12
 msgid "Global"
 msgstr "Globální"
 
-msgid "MRKV Review Reminder"
-msgstr "MRKV Připomenutí recenze"
+#. URI of the plugin
+msgid "https://morkva.co.ua/product-category/plugins/"
+msgstr "https://morkva.co.ua/product-category/plugins/"
 
+#: classes/reminder/mrkv-review-reminder-sender.php:211
+msgid "Leave review"
+msgstr "Zanechat recenzi"
+
+#. Author of the plugin
+msgid "MORKVA"
+msgstr "MORKVA"
+
+#. Name of the plugin
+#: classes/woocommerce/mrkv-review-reminder-woo-order.php:81
 msgid "Morkva Review Reminder"
 msgstr "Morkva Připomenutí recenze"
 
+#: classes/settings/admin/mrkv-review-reminder-menu.php:37
+msgid "MRKV Review Reminder"
+msgstr "MRKV Připomenutí recenze"
+
+#: templates/settings/template-mrkv-review-reminder-settings.php:237
 msgid "Need help or customization?"
 msgstr "Potřebujete pomoc nebo úpravy?"
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:193
 msgid "Plain text, no html"
 msgstr "Prostý text, bez HTML"
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:126
 msgid "Reminder interval, days"
 msgstr "Interval připomenutí, dny"
 
+#: classes/woocommerce/mrkv-review-reminder-woo-order.php:148
 msgid "Remove reminder"
 msgstr "Odstranit připomenutí"
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:165
 msgid "Reply-to"
 msgstr "Odpovědět na"
 
+#: classes/woocommerce/mrkv-review-reminder-woo-order.php:126
 msgid "Resend reminder"
 msgstr "Znovu odeslat připomenutí"
 
-msgid "Review Reminder"
-msgstr "Připomenutí recenze"
-
+#: classes/reminder/mrkv-review-reminder-sender.php:66
+#: classes/reminder/mrkv-review-reminder-sender.php:111
 msgid "Review recently purchased products"
 msgstr "Zrecenzovat nedávno zakoupené produkty"
 
+#: classes/woocommerce/mrkv-review-reminder-woo-orders.php:39
+msgid "Review Reminder"
+msgstr "Připomenutí recenze"
+
+#: templates/settings/template-mrkv-review-reminder-settings.php:228
 msgid "Save"
 msgstr "Uložit"
 
+#: classes/woocommerce/mrkv-review-reminder-woo-order.php:138
+#: classes/woocommerce/mrkv-review-reminder-woo-orders.php:100
 msgid "Scheduled on:"
 msgstr "Naplánováno na:"
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:218
 msgid "Send"
 msgstr "Odeslat"
 
-msgid "Send a test email to the specified email. The product will be taken the last one published"
-msgstr "Odeslat zkušební e-mail na zadanou adresu. Produkt bude vybrán poslední publikovaný"
+#: templates/settings/template-mrkv-review-reminder-settings.php:211
+msgid ""
+"Send a test email to the specified email. The product will be taken the last "
+"one published"
+msgstr ""
+"Odeslat zkušební e-mail na zadanou adresu. Produkt bude vybrán poslední "
+"publikovaný"
 
+#: classes/woocommerce/mrkv-review-reminder-woo-order.php:144
+#: classes/woocommerce/mrkv-review-reminder-woo-order.php:160
+#: classes/woocommerce/mrkv-review-reminder-woo-orders.php:104
+#: classes/woocommerce/mrkv-review-reminder-woo-orders.php:118
+#: classes/reminder/mrkv-review-reminder-sender.php:42
 msgid "Send now"
 msgstr "Odeslat nyní"
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:152
 msgid "Sender name"
 msgstr "Jméno odesílatele"
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:222
 msgid "Sent"
 msgstr "Odesláno"
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:29
 msgid "Settings"
 msgstr "Nastavení"
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:141
 msgid "Shortcode firstname: [mrkv-firstname]"
 msgstr "Shortcode křestní jméno: [mrkv-firstname]"
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:236
 msgid "Support"
 msgstr "Podpora"
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:214
 msgid "Test Email address"
 msgstr "Testovací e-mailová adresa"
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:209
 msgid "Test letter"
 msgstr "Testovací dopis"
+
+#. Description of the plugin
+msgid "We send simple emails to remind you of your review"
+msgstr "Posíláme jednoduché e-maily, které vám připomenou vaši recenzi"

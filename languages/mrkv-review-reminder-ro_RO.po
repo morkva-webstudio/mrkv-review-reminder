@@ -1,130 +1,218 @@
 msgid ""
 msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
-"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 19) || (n%100 == 0)) ? 2 : 1);\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 19) || (n%100 "
+"== 0)) ? 2 : 1);\n"
+"Language: ro_RO\n"
+"Language-Team: Romanian\n"
+"PO-Revision-Date: 2025-07-31 06:07+0000\n"
+"X-Generator: Loco https://localise.biz/"
 
+#: classes/woocommerce/mrkv-review-reminder-woo-order.php:122
+#: classes/woocommerce/mrkv-review-reminder-woo-order.php:156
 msgid "Actions"
 msgstr "Acțiuni"
 
+#: classes/woocommerce/mrkv-review-reminder-woo-order.php:99
+#: classes/woocommerce/mrkv-review-reminder-woo-orders.php:88
+#: classes/reminder/mrkv-review-reminder-sender.php:101
+#: classes/settings/admin/mrkv-review-reminder-admin-assets.php:36
 msgid "Already sent"
 msgstr "Deja trimis"
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:34
 msgid "Basic"
 msgstr "De bază"
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:117
 msgid "Basic settings"
 msgstr "Setări de bază"
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:177
+msgid "Button text (Default: Leave review)"
+msgstr "Textul butonului (Implicit: Lasă un review)"
+
+#: templates/settings/template-mrkv-review-reminder-settings.php:134
 msgid "Create a message that will be sent"
 msgstr "Creați un mesaj care va fi trimis"
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:35
 msgid "Debug"
 msgstr "Depanare"
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:200
 msgid "Debug Settings"
 msgstr "Setări depanare"
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:238
 msgid "E-mail"
 msgstr "E-mail"
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:132
 msgid "Email configurations"
 msgstr "Configurații e-mail"
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:187
 msgid "Email header"
 msgstr "Antet e-mail"
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:143
 msgid "Email subject"
 msgstr "Subiect e-mail"
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:195
 msgid "Email text"
 msgstr "Text e-mail"
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:205
 msgid "Enable log to order note"
 msgstr "Activează jurnalul în nota de comandă"
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:167
 msgid "Enter email..."
 msgstr "Introduceți e-mail..."
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:187
 msgid "Enter header..."
 msgstr "Introduceți antet..."
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:177
+msgid "Enter text..."
+msgstr "Introduceți textul..."
+
+#: templates/settings/template-mrkv-review-reminder-settings.php:195
 msgid "Enter the email..."
 msgstr "Introduceți e-mailul..."
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:154
 msgid "Enter the sender..."
 msgstr "Introduceți expeditorul..."
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:143
 msgid "Enter the subject..."
 msgstr "Introduceți subiectul..."
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:152
+#: templates/settings/template-mrkv-review-reminder-settings.php:165
 msgid "From WooCommerce email settings"
 msgstr "Din setările de e-mail WooCommerce"
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:12
 msgid "Global"
 msgstr "Global"
 
-msgid "MRKV Review Reminder"
-msgstr "MRKV Reamintire Recenzie"
+#. URI of the plugin
+msgid "https://morkva.co.ua/product-category/plugins/"
+msgstr "https://morkva.co.ua/product-category/plugins/"
 
+#: classes/reminder/mrkv-review-reminder-sender.php:211
+msgid "Leave review"
+msgstr "Lasă un review"
+
+#. Author of the plugin
+msgid "MORKVA"
+msgstr "MORKVA"
+
+#. Name of the plugin
+#: classes/woocommerce/mrkv-review-reminder-woo-order.php:81
 msgid "Morkva Review Reminder"
 msgstr "Morkva Reamintire Recenzie"
 
+#: classes/settings/admin/mrkv-review-reminder-menu.php:37
+msgid "MRKV Review Reminder"
+msgstr "MRKV Reamintire Recenzie"
+
+#: templates/settings/template-mrkv-review-reminder-settings.php:237
 msgid "Need help or customization?"
 msgstr "Aveți nevoie de ajutor sau personalizare?"
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:193
 msgid "Plain text, no html"
 msgstr "Text simplu, fără HTML"
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:126
 msgid "Reminder interval, days"
 msgstr "Interval reamintire, zile"
 
+#: classes/woocommerce/mrkv-review-reminder-woo-order.php:148
 msgid "Remove reminder"
 msgstr "Elimină reamintirea"
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:165
 msgid "Reply-to"
 msgstr "Răspunde la"
 
+#: classes/woocommerce/mrkv-review-reminder-woo-order.php:126
 msgid "Resend reminder"
 msgstr "Retrimite reamintirea"
 
-msgid "Review Reminder"
-msgstr "Reamintire Recenzie"
-
+#: classes/reminder/mrkv-review-reminder-sender.php:66
+#: classes/reminder/mrkv-review-reminder-sender.php:111
 msgid "Review recently purchased products"
 msgstr "Revizuiți produsele cumpărate recent"
 
+#: classes/woocommerce/mrkv-review-reminder-woo-orders.php:39
+msgid "Review Reminder"
+msgstr "Reamintire Recenzie"
+
+#: templates/settings/template-mrkv-review-reminder-settings.php:228
 msgid "Save"
 msgstr "Salvați"
 
+#: classes/woocommerce/mrkv-review-reminder-woo-order.php:138
+#: classes/woocommerce/mrkv-review-reminder-woo-orders.php:100
 msgid "Scheduled on:"
 msgstr "Programat la:"
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:218
 msgid "Send"
 msgstr "Trimite"
 
-msgid "Send a test email to the specified email. The product will be taken the last one published"
-msgstr "Trimiteți un e-mail de test la adresa specificată. Produsul va fi ultimul publicat"
+#: templates/settings/template-mrkv-review-reminder-settings.php:211
+msgid ""
+"Send a test email to the specified email. The product will be taken the last "
+"one published"
+msgstr ""
+"Trimiteți un e-mail de test la adresa specificată. Produsul va fi ultimul "
+"publicat"
 
+#: classes/woocommerce/mrkv-review-reminder-woo-order.php:144
+#: classes/woocommerce/mrkv-review-reminder-woo-order.php:160
+#: classes/woocommerce/mrkv-review-reminder-woo-orders.php:104
+#: classes/woocommerce/mrkv-review-reminder-woo-orders.php:118
+#: classes/reminder/mrkv-review-reminder-sender.php:42
 msgid "Send now"
 msgstr "Trimite acum"
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:152
 msgid "Sender name"
 msgstr "Nume expeditor"
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:222
 msgid "Sent"
 msgstr "Trimis"
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:29
 msgid "Settings"
 msgstr "Setări"
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:141
 msgid "Shortcode firstname: [mrkv-firstname]"
 msgstr "Shortcode prenume: [mrkv-firstname]"
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:236
 msgid "Support"
 msgstr "Suport"
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:214
 msgid "Test Email address"
 msgstr "Adresă e-mail de test"
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:209
 msgid "Test letter"
 msgstr "Scrisoare de test"
+
+#. Description of the plugin
+msgid "We send simple emails to remind you of your review"
+msgstr ""
+"Trimitem emailuri simple pentru a vă reaminti de recenzia dumneavoastră"

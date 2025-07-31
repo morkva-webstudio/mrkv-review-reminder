@@ -1,131 +1,215 @@
+#, fuzzy
 msgid ""
 msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Language: \n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"POT-Creation-Date: 2025-07-31 05:35+0000\n"
+"X-Generator: Loco https://localise.biz/"
 
+#: classes/woocommerce/mrkv-review-reminder-woo-order.php:122
+#: classes/woocommerce/mrkv-review-reminder-woo-order.php:156
 msgid "Actions"
 msgstr ""
 
+#: classes/woocommerce/mrkv-review-reminder-woo-order.php:99
+#: classes/woocommerce/mrkv-review-reminder-woo-orders.php:88
+#: classes/reminder/mrkv-review-reminder-sender.php:101
+#: classes/settings/admin/mrkv-review-reminder-admin-assets.php:36
 msgid "Already sent"
 msgstr ""
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:34
 msgid "Basic"
 msgstr ""
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:117
 msgid "Basic settings"
 msgstr ""
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:177
+msgid "Button text (Default: Leave review)"
+msgstr ""
+
+#: templates/settings/template-mrkv-review-reminder-settings.php:134
 msgid "Create a message that will be sent"
 msgstr ""
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:35
 msgid "Debug"
 msgstr ""
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:200
 msgid "Debug Settings"
 msgstr ""
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:238
 msgid "E-mail"
 msgstr ""
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:132
 msgid "Email configurations"
 msgstr ""
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:187
 msgid "Email header"
 msgstr ""
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:143
 msgid "Email subject"
 msgstr ""
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:195
 msgid "Email text"
 msgstr ""
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:205
 msgid "Enable log to order note"
 msgstr ""
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:167
 msgid "Enter email..."
 msgstr ""
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:187
 msgid "Enter header..."
 msgstr ""
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:177
+msgid "Enter text..."
+msgstr ""
+
+#: templates/settings/template-mrkv-review-reminder-settings.php:195
 msgid "Enter the email..."
 msgstr ""
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:154
 msgid "Enter the sender..."
 msgstr ""
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:143
 msgid "Enter the subject..."
 msgstr ""
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:152
+#: templates/settings/template-mrkv-review-reminder-settings.php:165
 msgid "From WooCommerce email settings"
 msgstr ""
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:12
 msgid "Global"
 msgstr ""
 
-msgid "MRKV Review Reminder"
+#. URI of the plugin
+msgid "https://morkva.co.ua/product-category/plugins/"
 msgstr ""
 
+#: classes/reminder/mrkv-review-reminder-sender.php:211
+msgid "Leave review"
+msgstr ""
+
+#. Author of the plugin
+msgid "MORKVA"
+msgstr ""
+
+#. Name of the plugin
+#: classes/woocommerce/mrkv-review-reminder-woo-order.php:81
 msgid "Morkva Review Reminder"
 msgstr ""
 
+#: classes/settings/admin/mrkv-review-reminder-menu.php:37
+msgid "MRKV Review Reminder"
+msgstr ""
+
+#: templates/settings/template-mrkv-review-reminder-settings.php:237
 msgid "Need help or customization?"
 msgstr ""
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:193
 msgid "Plain text, no html"
 msgstr ""
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:126
 msgid "Reminder interval, days"
 msgstr ""
 
+#: classes/woocommerce/mrkv-review-reminder-woo-order.php:148
 msgid "Remove reminder"
 msgstr ""
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:165
 msgid "Reply-to"
 msgstr ""
 
+#: classes/woocommerce/mrkv-review-reminder-woo-order.php:126
 msgid "Resend reminder"
 msgstr ""
 
-msgid "Review Reminder"
-msgstr ""
-
+#: classes/reminder/mrkv-review-reminder-sender.php:66
+#: classes/reminder/mrkv-review-reminder-sender.php:111
 msgid "Review recently purchased products"
 msgstr ""
 
+#: classes/woocommerce/mrkv-review-reminder-woo-orders.php:39
+msgid "Review Reminder"
+msgstr ""
+
+#: templates/settings/template-mrkv-review-reminder-settings.php:228
 msgid "Save"
 msgstr ""
 
+#: classes/woocommerce/mrkv-review-reminder-woo-order.php:138
+#: classes/woocommerce/mrkv-review-reminder-woo-orders.php:100
 msgid "Scheduled on:"
 msgstr ""
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:218
 msgid "Send"
 msgstr ""
 
-msgid "Send a test email to the specified email. The product will be taken the last one published"
+#: templates/settings/template-mrkv-review-reminder-settings.php:211
+msgid ""
+"Send a test email to the specified email. The product will be taken the last "
+"one published"
 msgstr ""
 
+#: classes/woocommerce/mrkv-review-reminder-woo-order.php:144
+#: classes/woocommerce/mrkv-review-reminder-woo-order.php:160
+#: classes/woocommerce/mrkv-review-reminder-woo-orders.php:104
+#: classes/woocommerce/mrkv-review-reminder-woo-orders.php:118
+#: classes/reminder/mrkv-review-reminder-sender.php:42
 msgid "Send now"
 msgstr ""
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:152
 msgid "Sender name"
 msgstr ""
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:222
 msgid "Sent"
 msgstr ""
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:29
 msgid "Settings"
 msgstr ""
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:141
 msgid "Shortcode firstname: [mrkv-firstname]"
 msgstr ""
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:236
 msgid "Support"
 msgstr ""
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:214
 msgid "Test Email address"
 msgstr ""
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:209
 msgid "Test letter"
 msgstr ""
 
+#. Description of the plugin
+msgid "We send simple emails to remind you of your review"
+msgstr ""

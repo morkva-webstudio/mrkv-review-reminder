@@ -208,6 +208,8 @@ if (!class_exists('MRKV_REVIEW_REMINDER_SENDER'))
 			# Create default empty
 			$products_html = '';
 
+			$text_leave_comment = (isset($this->mrkv_review_reminder['email']['btn_text']) && $this->mrkv_review_reminder['email']['btn_text']) ? $this->mrkv_review_reminder['email']['btn_text'] : __( 'Leave review', 'mrkv-review-reminder-pro' );
+
 			# Check test mode sending
 			if($is_test)
 			{
@@ -241,6 +243,10 @@ if (!class_exists('MRKV_REVIEW_REMINDER_SENDER'))
 							</td>
 							<td style="padding: 10px; vertical-align: middle;">
 								<a style="text-decoration: none;" href="' . get_permalink($last_product->get_id()) . '">' . $last_product->get_name() . '</a>
+								<br>
+				                <a href="' . get_permalink($last_product->get_id()) . '#reviews" style="display: inline-block; margin-top: 6px; font-size: 13px;">
+				                   ' . $text_leave_comment . '
+				                </a>
 							</td>
 						</tr>';
 			    	}
@@ -263,51 +269,61 @@ if (!class_exists('MRKV_REVIEW_REMINDER_SENDER'))
 					# Check product
 					if ($product) 
 					{
-						# Check product type
-						if ($product->is_type('variable')) 
-						{
-							# Get variation ID
-							$variation_id = $item->get_variation_id();
+					    # Check product type
+					    if ($product->is_type('variable')) 
+					    {
+					        # Get variation ID
+					        $variation_id = $item->get_variation_id();
 
-							# Check variation ID
-							if ($variation_id) 
-							{
-								# Get variation object
-								$variation = new WC_Product_Variation($variation_id); 
+					        # Check variation ID
+					        if ($variation_id) 
+					        {
+					            # Get variation object
+					            $variation = new WC_Product_Variation($variation_id); 
 
-								# Get variation image
-								$image = wp_get_attachment_image_src($variation->get_image_id(), 'thumbnail')[0];
+					            # Get variation image
+					            $image = wp_get_attachment_image_src($variation->get_image_id(), 'thumbnail')[0];
 
-								# Add product to table row
-								$products_html .= '<tr>
-									<td style="padding: 10px; width: 80px;">
-										<a href="' . get_permalink($variation->get_id()) . '">
-											<img src="' . esc_url($image) . '" alt="' . esc_attr($variation->get_name()) . '" style="width: 70px; height: auto;"/>
-										</a>
-									</td>
-									<td style="padding: 10px; vertical-align: middle;">
-										<a style="text-decoration: none;" href="' . get_permalink($variation->get_id()) . '">' . $variation->get_name() . '</a>
-									</td>
-								</tr>';
-							}
-						} 
-						else 
-						{
-							# Get product image
-							$image = wp_get_attachment_image_src($product->get_image_id(), 'thumbnail')[0];
+					            # Add product to table row
+					            $products_html .= '<tr>
+					                <td style="padding: 10px; width: 80px;">
+					                    <a href="' . get_permalink($variation->get_id()) . '">
+					                        <img src="' . esc_url($image) . '" alt="' . esc_attr($variation->get_name()) . '" style="width: 70px; height: auto;"/>
+					                    </a>
+					                </td>
+					                <td style="padding: 10px; vertical-align: middle;">
+					                    <a style="text-decoration: none; font-weight: bold;" href="' . get_permalink($variation->get_id()) . '">' . $variation->get_name() . '</a>
+					                    <br>
+					                    <a href="' . get_permalink($variation->get_id()) . '#reviews" 
+					                       style="display: inline-block; margin-top: 6px;font-size: 13px;">
+					                       ' . $text_leave_comment . '
+					                    </a>
+					                </td>
+					            </tr>';
+					        }
+					    } 
+					    else 
+					    {
+					        # Get product image
+					        $image = wp_get_attachment_image_src($product->get_image_id(), 'thumbnail')[0];
 
-							# Add product to table row
-							$products_html .= '<tr>
-								<td style="padding: 10px; width: 80px;">
-									<a href="' . get_permalink($product->get_id()) . '">
-										<img src="' . esc_url($image) . '" alt="' . esc_attr($product->get_name()) . '" style="width: 70px; height: auto;"/>
-									</a>
-								</td>
-								<td style="padding: 10px; vertical-align: middle;">
-									<a style="text-decoration: none;" href="' . get_permalink($product->get_id()) . '">' . $product->get_name() . '</a>
-								</td>
-							</tr>';
-						}
+					        # Add product to table row
+					        $products_html .= '<tr>
+					            <td style="padding: 10px; width: 80px;">
+					                <a href="' . get_permalink($product->get_id()) . '">
+					                    <img src="' . esc_url($image) . '" alt="' . esc_attr($product->get_name()) . '" style="width: 70px; height: auto;"/>
+					                </a>
+					            </td>
+					            <td style="padding: 10px; vertical-align: middle;">
+					                <a style="text-decoration: none; font-weight: bold;" href="' . get_permalink($product->get_id()) . '">' . $product->get_name() . '</a>
+					                <br>
+					                <a href="' . get_permalink($product->get_id()) . '#reviews" 
+					                   style="display: inline-block; margin-top: 6px; font-size: 13px;">
+					                   ' . $text_leave_comment . '
+					                </a>
+					            </td>
+					        </tr>';
+					    }
 					}
 				}
 

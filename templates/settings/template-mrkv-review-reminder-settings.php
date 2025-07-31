@@ -156,14 +156,28 @@
 										</div>
 									</div>
 								</div>
-								<div class="admin_ua_ship_morkva_settings_line">
-									<?php 
-										$data = get_option('woocommerce_email_from_address');
-										$description = '';
-										$label = __('Reply-to', 'mrkv-review-reminder') . '<span class="mrkv-up-ship-tooltip"><img src="' . MRKV_REVIEW_REMINDER_IMG_URL . '/global/info-icon.svg' .'" ><div class="mrkv-up-ship-tooltip__data">' . __('From WooCommerce email settings', 'mrkv-review-reminder') . '</div></span>';
+								<div class="admin_ua_ship_morkva_settings_row">
+									<div class="col-mrkv-5">
+										<div class="admin_ua_ship_morkva_settings_line">
+											<?php 
+												$data = get_option('woocommerce_email_from_address');
+												$description = '';
+												$label = __('Reply-to', 'mrkv-review-reminder') . '<span class="mrkv-up-ship-tooltip"><img src="' . MRKV_REVIEW_REMINDER_IMG_URL . '/global/info-icon.svg' .'" ><div class="mrkv-up-ship-tooltip__data">' . __('From WooCommerce email settings', 'mrkv-review-reminder') . '</div></span>';
 
-										echo wp_kses($field_generator->get_input_text($label, 'mrkv_review_reminder[email][reply]', $data, 'mrkv_review_reminder_email_reply' , '', __('Enter email...', 'mrkv-review-reminder'), $description, 'disabled'), $allowed_tags);
-									?>
+												echo wp_kses($field_generator->get_input_text($label, 'mrkv_review_reminder[email][reply]', $data, 'mrkv_review_reminder_email_reply' , '', __('Enter email...', 'mrkv-review-reminder'), $description, 'disabled'), $allowed_tags);
+											?>
+										</div>
+									</div>
+									<div class="col-mrkv-5">
+										<div class="admin_ua_ship_morkva_settings_line">
+											<?php 
+												$data = isset($mrkv_review_reminder['email']['btn_text']) ? $mrkv_review_reminder['email']['btn_text'] : '';
+												$description = '';
+
+												echo wp_kses($field_generator->get_input_text(__('Button text (Default: Leave review)', 'mrkv-review-reminder'), 'mrkv_review_reminder[email][btn_text]', $data, 'mrkv_review_reminder_email_btn_text' , '', __('Enter text...', 'mrkv-review-reminder'), $description), $allowed_tags);
+											?>
+										</div>
+									</div>
 								</div>
 								<div class="admin_ua_ship_morkva_settings_line">
 									<?php 
