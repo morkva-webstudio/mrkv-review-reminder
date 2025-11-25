@@ -42,6 +42,10 @@ if (!class_exists('MRKV_REVIEW_REMINDER_WOO_ORDER'))
 					return;
 				}
 
+				if ( $order->get_type() === 'subscription' ) {
+			        return;
+			    }
+
 				# Get settings reminder
 				$mrkv_review_reminder = get_option('mrkv_review_reminder');
 
