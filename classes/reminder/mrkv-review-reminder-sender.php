@@ -478,7 +478,7 @@ if (!class_exists('MRKV_REVIEW_REMINDER_SENDER'))
 
 			    <div id="template_body">
 			      <div class="email-body">
-			        ' . $content . $products_html . '
+			        ' . nl2br( wp_kses_post( $content ) ) . $products_html . '
 			      </div>
 			    </div>
 
