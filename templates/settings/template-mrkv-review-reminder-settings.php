@@ -194,6 +194,7 @@
 
 										echo wp_kses($field_generator->get_textarea(__('Email text', 'mrkv-review-reminder'), 'mrkv_review_reminder[email][content]', $data, 'mrkv_review_reminder_email_content' , '', __('Enter the email...', 'mrkv-review-reminder'), $description), $allowed_tags);
 									?>
+									<p><?php echo esc_html__('Shortcode firstname: [mrkv-firstname]', 'mrkv-review-reminder'); ?></p>
 								</div>
 							</section>
 							<section id="log" class="mrkv_up_ship_shipping_tab_block">

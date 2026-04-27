@@ -4,7 +4,7 @@ Tags: order, review, rating
 Requires at least: 6.0
 Tested up to: 6.9
 Requires PHP: 7.4
-Stable tag: 1.0.10
+Stable tag: 1.0.11
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -53,6 +53,9 @@ Sure, just drop us a line at: support@morkva.co.ua
 
 
 == Changelog ==
+
+= 1.0.11 =
+* [new] added shotcode to settings email content
 
 = 1.0.10 =
 * WP 6.9 - compatible
