@@ -4,20 +4,28 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Language: fi_FI\n"
 "Language-Team: Finnish (Finland)\n"
-"PO-Revision-Date: 2025-07-31 05:43+0000\n"
+"PO-Revision-Date: 2026-05-05 11:18+0000\n"
 "X-Generator: Loco https://localise.biz/"
 
-#: classes/woocommerce/mrkv-review-reminder-woo-order.php:122
-#: classes/woocommerce/mrkv-review-reminder-woo-order.php:156
+#: classes/woocommerce/mrkv-review-reminder-woo-order.php:131
+#: classes/woocommerce/mrkv-review-reminder-woo-order.php:165
 msgid "Actions"
 msgstr "Toiminnot"
 
-#: classes/woocommerce/mrkv-review-reminder-woo-order.php:99
+#: classes/woocommerce/mrkv-review-reminder-woo-order.php:108
 #: classes/woocommerce/mrkv-review-reminder-woo-orders.php:88
 #: classes/reminder/mrkv-review-reminder-sender.php:101
 #: classes/settings/admin/mrkv-review-reminder-admin-assets.php:36
 msgid "Already sent"
 msgstr "Jo lähetetty"
+
+#: templates/settings/template-mrkv-review-reminder-settings.php:298
+msgid "and more"
+msgstr "ja paljon muuta"
+
+#: templates/settings/template-mrkv-review-reminder-settings.php:296
+msgid "Apply custom CSS"
+msgstr "Käytä mukautettua CSS:ää"
 
 #: templates/settings/template-mrkv-review-reminder-settings.php:34
 msgid "Basic"
@@ -31,6 +39,18 @@ msgstr "Perusasetukset"
 msgid "Button text (Default: Leave review)"
 msgstr "Painikkeen teksti (Oletus: Jätä arvostelu)"
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:301
+msgid "Buy Pro-version"
+msgstr "Osta Pro-versio"
+
+#: templates/settings/template-mrkv-review-reminder-settings.php:280
+msgid "Check out pro-version"
+msgstr "Tutustu Pro-versioon"
+
+#: templates/settings/template-mrkv-review-reminder-settings.php:265
+msgid "Contact us via the widget on our website, or check out"
+msgstr "Ota meihin yhteyttä verkkosivustomme widgetin kautta tai tutustu"
+
 #: templates/settings/template-mrkv-review-reminder-settings.php:134
 msgid "Create a message that will be sent"
 msgstr "Luo lähetettävä viesti"
@@ -39,13 +59,17 @@ msgstr "Luo lähetettävä viesti"
 msgid "Debug"
 msgstr "Vianmääritys"
 
-#: templates/settings/template-mrkv-review-reminder-settings.php:200
+#: templates/settings/template-mrkv-review-reminder-settings.php:201
 msgid "Debug Settings"
 msgstr "Vianmääritysasetukset"
 
-#: templates/settings/template-mrkv-review-reminder-settings.php:238
-msgid "E-mail"
-msgstr "Sähköposti"
+#: templates/settings/template-mrkv-review-reminder-settings.php:273
+msgid "Documantation"
+msgstr "Dokumentaatio"
+
+#: templates/settings/template-mrkv-review-reminder-settings.php:266
+msgid "documantation"
+msgstr "dokumentaatio"
 
 #: templates/settings/template-mrkv-review-reminder-settings.php:132
 msgid "Email configurations"
@@ -63,7 +87,7 @@ msgstr "Sähköpostin aihe"
 msgid "Email text"
 msgstr "Sähköpostin teksti"
 
-#: templates/settings/template-mrkv-review-reminder-settings.php:205
+#: templates/settings/template-mrkv-review-reminder-settings.php:206
 msgid "Enable log to order note"
 msgstr "Ota loki käyttöön tilausmuistiinpanoon"
 
@@ -91,6 +115,10 @@ msgstr "Anna lähettäjä..."
 msgid "Enter the subject..."
 msgstr "Anna aihe..."
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:284
+msgid "Filter by category"
+msgstr "Suodata luokittain"
+
 #: templates/settings/template-mrkv-review-reminder-settings.php:152
 #: templates/settings/template-mrkv-review-reminder-settings.php:165
 msgid "From WooCommerce email settings"
@@ -100,30 +128,54 @@ msgstr "WooCommercen sähköpostiasetuksista"
 msgid "Global"
 msgstr "Globaali"
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:270
+msgid "Go to the website"
+msgstr "Siirry verkkosivustolle"
+
 #. URI of the plugin
 msgid "https://morkva.co.ua/product-category/plugins/"
 msgstr "https://morkva.co.ua/product-category/plugins/"
 
-#: classes/reminder/mrkv-review-reminder-sender.php:211
+#: templates/settings/template-mrkv-review-reminder-settings.php:263
+msgid "Isn’t good enough for a 5"
+msgstr "Ei riitä viitoseen"
+
+#: templates/settings/template-mrkv-review-reminder-settings.php:255
+msgid "Leave"
+msgstr "Lähde"
+
+#: classes/reminder/mrkv-review-reminder-sender.php:208
 msgid "Leave review"
 msgstr "Jätä arvostelu"
 
+#: templates/settings/template-mrkv-review-reminder-settings.php:243
+msgid "Like this plugin?"
+msgstr "Pidätkö tästä laajennuksesta?"
+
+#: templates/settings/template-mrkv-review-reminder-settings.php:292
+msgid "Modify sender’s email"
+msgstr "Muokkaa lähettäjän sähköpostiosoitetta"
+
+#: templates/settings/template-mrkv-review-reminder-settings.php:288
+msgid "Modify sender’s name"
+msgstr "Muokkaa lähettäjän nimeä"
+
 #. Author of the plugin
-msgid "MORKVA"
-msgstr "MORKVA"
+#| msgid "MORKVA"
+msgid "morkva"
+msgstr "morkva"
 
 #. Name of the plugin
-#: classes/woocommerce/mrkv-review-reminder-woo-order.php:81
-msgid "Morkva Review Reminder"
-msgstr "Morkva Arvostelumuistutus"
-
+#: classes/woocommerce/mrkv-review-reminder-woo-order.php:90
 #: classes/settings/admin/mrkv-review-reminder-menu.php:37
-msgid "MRKV Review Reminder"
-msgstr "MRKV Arvostelumuistutus"
+#: classes/settings/admin/mrkv-review-reminder-menu.php:37
+#| msgid "Morkva Review Reminder"
+msgid "morkva Review Reminder"
+msgstr "morkva Arvostelumuistutus"
 
-#: templates/settings/template-mrkv-review-reminder-settings.php:237
-msgid "Need help or customization?"
-msgstr "Tarvitsetko apua tai räätälöintiä?"
+#: templates/settings/template-mrkv-review-reminder-settings.php:307
+msgid "Other free plugins"
+msgstr "Muita ilmaisia laajennuksia"
 
 #: templates/settings/template-mrkv-review-reminder-settings.php:193
 msgid "Plain text, no html"
@@ -133,7 +185,7 @@ msgstr "Pelkkä teksti, ei HTML:ää"
 msgid "Reminder interval, days"
 msgstr "Muistutusväli, päivät"
 
-#: classes/woocommerce/mrkv-review-reminder-woo-order.php:148
+#: classes/woocommerce/mrkv-review-reminder-woo-order.php:157
 msgid "Remove reminder"
 msgstr "Poista muistutus"
 
@@ -141,9 +193,13 @@ msgstr "Poista muistutus"
 msgid "Reply-to"
 msgstr "Vastaa osoitteeseen"
 
-#: classes/woocommerce/mrkv-review-reminder-woo-order.php:126
+#: classes/woocommerce/mrkv-review-reminder-woo-order.php:135
 msgid "Resend reminder"
 msgstr "Lähetä muistutus uudelleen"
+
+#: templates/settings/template-mrkv-review-reminder-settings.php:251
+msgid "review at"
+msgstr "arvostelu osoitteessa"
 
 #: classes/reminder/mrkv-review-reminder-sender.php:66
 #: classes/reminder/mrkv-review-reminder-sender.php:111
@@ -154,20 +210,20 @@ msgstr "Arvioi äskettäin ostetut tuotteet"
 msgid "Review Reminder"
 msgstr "Arvostelumuistutus"
 
-#: templates/settings/template-mrkv-review-reminder-settings.php:228
+#: templates/settings/template-mrkv-review-reminder-settings.php:235
 msgid "Save"
 msgstr "Tallenna"
 
-#: classes/woocommerce/mrkv-review-reminder-woo-order.php:138
+#: classes/woocommerce/mrkv-review-reminder-woo-order.php:147
 #: classes/woocommerce/mrkv-review-reminder-woo-orders.php:100
 msgid "Scheduled on:"
 msgstr "Ajoitettu:"
 
-#: templates/settings/template-mrkv-review-reminder-settings.php:218
+#: templates/settings/template-mrkv-review-reminder-settings.php:224
 msgid "Send"
 msgstr "Lähetä"
 
-#: templates/settings/template-mrkv-review-reminder-settings.php:211
+#: templates/settings/template-mrkv-review-reminder-settings.php:212
 msgid ""
 "Send a test email to the specified email. The product will be taken the last "
 "one published"
@@ -175,8 +231,8 @@ msgstr ""
 "Lähetä testisähköposti määritettyyn sähköpostiosoitteeseen. Tuotteena "
 "käytetään viimeksi julkaistua"
 
-#: classes/woocommerce/mrkv-review-reminder-woo-order.php:144
-#: classes/woocommerce/mrkv-review-reminder-woo-order.php:160
+#: classes/woocommerce/mrkv-review-reminder-woo-order.php:153
+#: classes/woocommerce/mrkv-review-reminder-woo-order.php:169
 #: classes/woocommerce/mrkv-review-reminder-woo-orders.php:104
 #: classes/woocommerce/mrkv-review-reminder-woo-orders.php:118
 #: classes/reminder/mrkv-review-reminder-sender.php:42
@@ -187,7 +243,7 @@ msgstr "Lähetä nyt"
 msgid "Sender name"
 msgstr "Lähettäjän nimi"
 
-#: templates/settings/template-mrkv-review-reminder-settings.php:222
+#: templates/settings/template-mrkv-review-reminder-settings.php:228
 msgid "Sent"
 msgstr "Lähetetty"
 
@@ -196,20 +252,25 @@ msgid "Settings"
 msgstr "Asetukset"
 
 #: templates/settings/template-mrkv-review-reminder-settings.php:141
+#: templates/settings/template-mrkv-review-reminder-settings.php:197
 msgid "Shortcode firstname: [mrkv-firstname]"
 msgstr "Lyhytkoodi etunimi: [mrkv-firstname]"
 
-#: templates/settings/template-mrkv-review-reminder-settings.php:236
-msgid "Support"
-msgstr "Tuki"
+#: templates/settings/template-mrkv-review-reminder-settings.php:245
+msgid "Support our efforts with a"
+msgstr "Tue toimintaamme"
 
-#: templates/settings/template-mrkv-review-reminder-settings.php:214
+#: templates/settings/template-mrkv-review-reminder-settings.php:220
 msgid "Test Email address"
 msgstr "Testisähköpostiosoite"
 
-#: templates/settings/template-mrkv-review-reminder-settings.php:209
+#: templates/settings/template-mrkv-review-reminder-settings.php:210
 msgid "Test letter"
 msgstr "Testikirje"
+
+#: templates/settings/template-mrkv-review-reminder-settings.php:216
+msgid "Test Order ID (Default: last)"
+msgstr "Tilaustunnus (oletus: viimeisin)"
 
 #. Description of the plugin
 msgid "We send simple emails to remind you of your review"

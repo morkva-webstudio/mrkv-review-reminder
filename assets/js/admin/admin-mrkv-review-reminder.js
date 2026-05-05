@@ -66,12 +66,19 @@ jQuery(window).on('load', function()
         });
         jQuery('.mrkv_review_reminder__send_test_email').click(function(){
                 var reminder_test_email = jQuery('#mrkv_review_reminder_email_test').val();
+                var order_id_val = jQuery('#mrkv_review_reminder_email_order_id').val().trim();
+                var reminder_email_order_id = (order_id_val === "") ? "last" : order_id_val;
+
+                if (reminder_email_order_id !== "last" && isNaN(reminder_email_order_id)) {
+                        alert("Invalid Order ID");
+                }
 
                 if(reminder_test_email)
                 {
                         let data = {
                                 action: 'mrkv_review_reminder_test_send',
                                 email: reminder_test_email,
+                                order_id: reminder_email_order_id,
                                 nonce: mrkv_review_rem_helper.nonce
                         }
                         jQuery.ajax({

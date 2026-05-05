@@ -7,11 +7,11 @@
 		<div class="admin_mrkv_ua_shipping__header mrkv_block_rounded">
 			<div class="admin_mrkv_ua_shipping__header__content">
 				<a class="admin_mrkv_ua_shipping__header_img" href="<?php echo esc_url($current_page); ?>">
-					<img src="<?php echo esc_url(MRKV_REVIEW_REMINDER_IMG_URL . '/global/clock.svg'); ?>" alt="Morkva Review Reminder" title="Morkva Review Reminder">
+					<img src="<?php echo esc_url(MRKV_REVIEW_REMINDER_IMG_URL . '/global/clock.svg'); ?>" alt="morkva Review Reminder" title="morkva Review Reminder">
 				</a>
 				<a href="<?php echo esc_url($current_page); ?>"><?php echo esc_html__('Global', 'mrkv-review-reminder'); ?></a>
 				<a class="admin_mrkv_ua_shipping_morkva-logo" href="https://morkva.co.ua/" target="blanc">
-					<img src="<?php echo esc_url(MRKV_REVIEW_REMINDER_IMG_URL . '/global/morkva-logo.svg'); ?>" alt="Morkva" title="Morkva">
+					<img src="<?php echo esc_url(MRKV_REVIEW_REMINDER_IMG_URL . '/global/morkva-logo.svg'); ?>" alt="morkva" title="morkva">
 				</a>
 			</div>
 		</div>
@@ -211,16 +211,22 @@
 								</h3>
 								<p><?php echo esc_html__('Send a test email to the specified email. The product will be taken the last one published', 'mrkv-review-reminder'); ?></p>
 								<hr class="mrkv-ua-ship__hr">
-								<div class="admin_ua_ship_morkva_settings_line">
-									<label for="mrkv_review_reminder_email_test"><?php echo esc_html__('Test Email address', 'mrkv-review-reminder'); ?></label>
-									<div class="mrkv_review_reminder__send_test_email__line">
-										<input id="mrkv_review_reminder_email_test" type="text"  placeholder="Enter email address..." value="">
-										<div class="mrkv_review_reminder__send_test_email">
-											<?php echo esc_html__('Send', 'mrkv-review-reminder'); ?>
-											<div class="mrkv_ua_ship_create_invoice__loader"></div>
-											<div class="mrkv_review_reminder_sent_text">
-												<img src="<?php echo esc_url(MRKV_REVIEW_REMINDER_IMG_URL . '/global/notice-success.svg'); ?>" alt="Email" title="Email">
-												<?php echo esc_html__('Sent', 'mrkv-review-reminder'); ?>
+								<div class="admin_ua_ship_morkva_settings_line admin_ua_ship_morkva_settings_line__row">
+									<div class="admin_ua_ship_morkva_settings_line_added">
+										<label for="mrkv_review_reminder_email_order_id"><?php echo esc_html__('Test Order ID (Default: last)', 'mrkv-review-reminder'); ?></label>
+										<input type="text" id="mrkv_review_reminder_email_order_id" placeholder="Enter order id...">
+									</div>
+									<div class="admin_ua_ship_morkva_settings_line_added_email">
+										<label for="mrkv_review_reminder_email_test"><?php echo esc_html__('Test Email address', 'mrkv-review-reminder'); ?></label>
+										<div class="mrkv_review_reminder__send_test_email__line">
+											<input id="mrkv_review_reminder_email_test" type="text"  placeholder="Enter email address..." value="">
+											<div class="mrkv_review_reminder__send_test_email">
+												<?php echo esc_html__('Send', 'mrkv-review-reminder'); ?>
+												<div class="mrkv_ua_ship_create_invoice__loader"></div>
+												<div class="mrkv_review_reminder_sent_text">
+													<img src="<?php echo esc_url(MRKV_REVIEW_REMINDER_IMG_URL . '/global/notice-success.svg'); ?>" alt="Email" title="Email">
+													<?php echo esc_html__('Sent', 'mrkv-review-reminder'); ?>
+												</div>
 											</div>
 										</div>
 									</div>
@@ -234,9 +240,101 @@
 		<div class="admin_mrkv_ua_shipping__block col-mrkv-3">
 			<div class="admin_mrkv_ua_shipping__plugin-info mrkv_block_rounded">
 				<div class="admin_mrkv_ua_shipping__plugin__support">
-					<h2><img src="<?php echo esc_url(MRKV_REVIEW_REMINDER_IMG_URL . '/global/question-icon.svg'); ?>" alt="Question" title="Question"><?php echo esc_html__('Support', 'mrkv-review-reminder'); ?></h2>
-					<p><?php echo esc_html__('Need help or customization?', 'mrkv-review-reminder'); ?></p>
-					<a href="mailto:support@morkva.co.ua" class="button button-primary admin_mrkv_ua_shipping__btn" target="_blank"><?php echo esc_html__('E-mail', 'mrkv-review-reminder'); ?></a>
+					<h2><?php echo esc_html__('Like this plugin?', 'mrkv-review-reminder'); ?></h2>
+					<p>
+						<?php echo esc_html__( 'Support our efforts with a', 'mrkv-review-reminder' ) . ' '; ?>
+						<img src="<?php echo esc_url(MRKV_REVIEW_REMINDER_IMG_URL . '/global/star.svg'); ?>" alt="Star" alt="Star">
+						<img src="<?php echo esc_url(MRKV_REVIEW_REMINDER_IMG_URL . '/global/star.svg'); ?>" alt="Star" alt="Star">
+						<img src="<?php echo esc_url(MRKV_REVIEW_REMINDER_IMG_URL . '/global/star.svg'); ?>" alt="Star" alt="Star">
+						<img src="<?php echo esc_url(MRKV_REVIEW_REMINDER_IMG_URL . '/global/star.svg'); ?>" alt="Star" alt="Star">
+						<img src="<?php echo esc_url(MRKV_REVIEW_REMINDER_IMG_URL . '/global/star.svg'); ?>" alt="Star" alt="Star">
+						<?php echo esc_html__( 'review at', 'mrkv-review-reminder' ); ?>
+						<a href="https://wordpress.org/plugins/mrkv-review-reminder/" target="blanc">WordPress.org</a>
+					</p>
+					<a class="button button-primary mrkv-btn-sidebar-main" href="https://wordpress.org/plugins/mrkv-review-reminder/" target="blanc">
+						<?php echo esc_html__( 'Leave', 'mrkv-review-reminder' ) . ' '; ?>
+						<img src="<?php echo esc_url(MRKV_REVIEW_REMINDER_IMG_URL . '/global/star.svg'); ?>" alt="Star" alt="Star">
+						<img src="<?php echo esc_url(MRKV_REVIEW_REMINDER_IMG_URL . '/global/star.svg'); ?>" alt="Star" alt="Star">
+						<img src="<?php echo esc_url(MRKV_REVIEW_REMINDER_IMG_URL . '/global/star.svg'); ?>" alt="Star" alt="Star">
+						<img src="<?php echo esc_url(MRKV_REVIEW_REMINDER_IMG_URL . '/global/star.svg'); ?>" alt="Star" alt="Star">
+						<img src="<?php echo esc_url(MRKV_REVIEW_REMINDER_IMG_URL . '/global/star.svg'); ?>" alt="Star" alt="Star">
+					</a>
+					<p>
+						<?php echo esc_html__( 'Isn’t good enough for a 5', 'mrkv-review-reminder' ) . ' '; ?>
+						<img src="<?php echo esc_url(MRKV_REVIEW_REMINDER_IMG_URL . '/global/star.svg'); ?>" alt="Star" alt="Star">? 
+						<?php echo esc_html__( 'Contact us via the widget on our website, or check out', 'mrkv-review-reminder' ) . ' '; ?>
+						<a href="https://docs.morkva.co.ua/uk?utm_source=plugin&utm_medium=sidebar&utm_campaign=review_reminder_free" target="blanc"><?php echo esc_html__( 'documantation', 'mrkv-review-reminder' ); ?></a>
+					</p>
+					<div class="mrkv-btns-line-sidebar" style="display: flex;gap: 4px;">
+						<a class="button mrkv-btn-sidebar-black" href="https://morkva.co.ua/?utm_source=plugin&utm_medium=sidebar&utm_campaign=review_reminder_free" target="blanc">
+							<?php echo esc_html__( 'Go to the website', 'mrkv-review-reminder' ); ?>
+						</a>
+						<a class="button mrkv-btn-sidebar-black" href="https://docs.morkva.co.ua/uk?utm_source=plugin&utm_medium=sidebar&utm_campaign=review_reminder_free" target="blanc">
+							<?php echo esc_html__( 'Documantation', 'mrkv-review-reminder' ); ?>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="admin_mrkv_ua_shipping__plugin-info mrkv_block_rounded">
+				<div class="admin_mrkv_ua_shipping__plugin__support">
+					<h2><?php echo esc_html__('Check out pro-version', 'mrkv-review-reminder'); ?></h2>
+					<ul>
+						<li>
+							<img src="<?php echo esc_url(MRKV_REVIEW_REMINDER_IMG_URL . '/global/check.svg'); ?>" alt="Check" alt="Check">
+							<?php echo esc_html__( 'Filter by category', 'mrkv-review-reminder' ); ?>
+						</li>
+						<li>
+							<img src="<?php echo esc_url(MRKV_REVIEW_REMINDER_IMG_URL . '/global/check.svg'); ?>" alt="Check" alt="Check">
+							<?php echo esc_html__( 'Modify sender’s name', 'mrkv-review-reminder' ); ?>
+						</li>
+						<li>
+							<img src="<?php echo esc_url(MRKV_REVIEW_REMINDER_IMG_URL . '/global/check.svg'); ?>" alt="Check" alt="Check">
+							<?php echo esc_html__( 'Modify sender’s email', 'mrkv-review-reminder' ); ?>
+						</li>
+						<li>
+							<img src="<?php echo esc_url(MRKV_REVIEW_REMINDER_IMG_URL . '/global/check.svg'); ?>" alt="Check" alt="Check">
+							<?php echo esc_html__( 'Apply custom CSS', 'mrkv-review-reminder' ); ?>
+						</li>
+						<li><?php echo esc_html__( 'and more', 'mrkv-review-reminder' ); ?></li>
+					</ul>
+					<a class="button button-primary mrkv-btn-sidebar-main" href="https://morkva.co.ua/shop/review-reminder-pro/?utm_source=plugin&utm_medium=sidebar&utm_campaign=review_reminder_free" target="blanc">
+						<?php echo esc_html__( 'Buy Pro-version', 'mrkv-review-reminder' ); ?>
+					</a>
+				</div>
+			</div>
+			<div class="admin_mrkv_ua_shipping__plugin-info mrkv_block_rounded">
+				<div class="admin_mrkv_ua_shipping__plugin__support">
+					<h2><?php echo esc_html__('Other free plugins', 'mrkv-review-reminder'); ?></h2>
+					<?php
+						$mrkv_review_reminder_response = wp_remote_get( 'https://morkva.co.ua/wp-json/pluginManagement/v2', array(
+							'headers' => array(
+							),
+							'timeout' => 30,
+							'redirection' => 5,
+							'httpversion' => '1.1',
+							'sslverify' => true
+						));
+
+						$mrkv_review_reminder_response_data = $mrkv_review_reminder_response['body'] ? json_decode( $mrkv_review_reminder_response['body'], true ) : null;
+						$mrkv_review_reminder_plugins = $mrkv_review_reminder_response_data['plugins'] ?? [];
+
+						if(!empty($mrkv_review_reminder_plugins))
+						{
+							?>
+								<ul style="list-style: disc;padding-left: 17px;">
+									<?php
+										foreach($mrkv_review_reminder_plugins as $mrkv_review_reminder_plugin_slug => $mrkv_review_reminder_plugin_data)
+										{
+											if($mrkv_review_reminder_plugin_slug == 'mrkv-review-reminder'){ continue; }
+											?>
+												<li><a style="display:block; margin-bottom:5px;" href="<?php echo esc_attr($mrkv_review_reminder_plugin_data['url'] ?? ''); ?>" target="blanc" class="plugin_line"><?php echo esc_attr($mrkv_review_reminder_plugin_data['label'] ?? ''); ?></a></li>
+											<?php
+										}
+									?>
+								</ul>
+							<?php
+						}
+					?>
 				</div>
 			</div>
 		</div>

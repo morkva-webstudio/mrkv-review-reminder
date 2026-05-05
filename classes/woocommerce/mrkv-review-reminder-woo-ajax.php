@@ -147,19 +147,46 @@ if (!class_exists('MRKV_REVIEW_REMINDER_WOO_AJAX'))
 			# Check nonce
 			if ( ! isset( $_POST['nonce'] ) || ! wp_verify_nonce( sanitize_text_field(wp_unslash($_POST['nonce'])), 'mrkv_review_reminder_sent_nonce' ) ) 
 			{
-				# Stop job
-		        wp_die();
-		    }
+				wp_die();
+			}
 
-		    # Check email
-			if(isset($_POST['email']) && is_email(sanitize_text_field(wp_unslash($_POST['email']))))
-			{
+			# Check email
+			if (isset($_POST['email']) && is_email(sanitize_text_field(wp_unslash($_POST['email'])))) {
+				$email = sanitize_email(wp_unslash($_POST['email']));
+				$raw_order_id = isset($_POST['order_id']) ? sanitize_text_field(wp_unslash($_POST['order_id'])) : 'last';
+				$order = false;
+
+				if ($raw_order_id !== 'last' && absint($raw_order_id) > 0) {
+					$order = wc_get_order(absint($raw_order_id));
+				}
+
+				if (!$order) {
+					$last_orders = wc_get_orders(array(
+						'limit'  => 1,
+						'orderby' => 'date',
+						'order'   => 'DESC',
+						'return'  => 'objects',
+					));
+
+					if (!empty($last_orders)) {
+						$order = $last_orders[0];
+					}
+				}
+
+				if (!$order) {
+					wp_send_json_error(__('No orders found on the website.', 'woocommerce'));
+				}
+
 				# Get reminder object
 				require_once MRKV_REVIEW_REMINDER_PLUGIN_PATH . 'classes/reminder/mrkv-review-reminder-sender.php';
-				$reminder = new MRKV_REVIEW_REMINDER_SENDER('');
+				$reminder = new MRKV_REVIEW_REMINDER_SENDER($order);
+				$message = $reminder->send_test_reminder($email);
 
-				# Send reminder
-				$message = $reminder->send_test_reminder(sanitize_text_field(wp_unslash($_POST['email'])));
+				if ( ob_get_length() ) {
+					ob_clean();
+				}
+				
+				wp_send_json_success($message);
 			}
 
 			# Stop job

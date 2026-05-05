@@ -87,7 +87,7 @@ if (!class_exists('MRKV_REVIEW_REMINDER_WOO_ORDER'))
 	        }
 
 	        # Add metabox
-        	add_meta_box('mrkv_review_reminder_data_box', __('Morkva Review Reminder', 'mrkv-review-reminder'), array( $this, 'mrkv_review_reminder_add_plugin_meta_box' ), $screen, 'side', 'core');
+        	add_meta_box('mrkv_review_reminder_data_box', __('morkva Review Reminder', 'mrkv-review-reminder'), array( $this, 'mrkv_review_reminder_add_plugin_meta_box' ), $screen, 'side', 'core');
 		}
 
 		public function mrkv_review_reminder_add_plugin_meta_box($post)
