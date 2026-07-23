@@ -24,7 +24,16 @@ if (!class_exists('MRKV_REVIEW_REMINDER_WOO_ORDER'))
 			# Add function to order create
 			add_action('woocommerce_checkout_order_processed', array($this, 'mrkv_review_reminder_add_meta'), 10, 1);
 			add_action( 'woocommerce_payment_complete', array( $this, 'mrkv_review_reminder_add_meta' ), 10, 1 );
+			add_filter( 'wc_subscriptions_renewal_order_data', array( $this, 'mrkv_review_reminder_exclude_from_meta_copy' ), 10, 1 );
+            add_filter( 'wcs_resubscribe_order_meta', array( $this, 'mrkv_review_reminder_exclude_from_meta_copy' ), 10, 1 );
 		}
+
+		public function mrkv_review_reminder_exclude_from_meta_copy($meta)
+        {
+            unset($meta['mrkv_review-reminder_sent']);
+            unset($meta['mrkv_review-reminder_sent_date']);
+            return $meta;
+        }
 
 		/**
 		 * Add meta reminder after create order

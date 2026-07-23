@@ -4,7 +4,7 @@ Tags: order, review, rating
 Requires at least: 6.0
 Tested up to: 6.9
 Requires PHP: 7.4
-Stable tag: 1.0.12
+Stable tag: 1.0.14
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -53,6 +53,12 @@ Sure, just drop us a line at: support@morkva.co.ua
 
 
 == Changelog ==
+
+= 1.0.14 =
+* [fix] added an exception to prevent meta cloning from subscriptions
+
+= 1.0.13 =
+* [fix]  fixed order status filter
 
 = 1.0.12 =
 * [new] added the option to select an order ID before sending a test email (the default is the most recent order)
