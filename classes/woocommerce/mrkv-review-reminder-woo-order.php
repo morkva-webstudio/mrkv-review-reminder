@@ -101,9 +101,9 @@ if (!class_exists('MRKV_REVIEW_REMINDER_WOO_ORDER'))
 
 		public function mrkv_review_reminder_add_plugin_meta_box($post)
 		{
-			if ($post instanceof WP_Post && $post->ID) 
+			if ($post instanceof WC_Order && $post->get_id()) 
 	        {
-	            $order_id = $post->ID;
+	            $order_id = $post->get_id();
 	            $order = wc_get_order($order_id);
 
 	            if($order)

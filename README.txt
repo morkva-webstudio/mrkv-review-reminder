@@ -2,9 +2,9 @@
 Contributors: bandido, dpmine
 Tags: order, review, rating
 Requires at least: 6.0
-Tested up to: 6.9
+Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.0.14
+Stable tag: 1.0.15
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -53,6 +53,9 @@ Sure, just drop us a line at: support@morkva.co.ua
 
 
 == Changelog ==
+
+= 1.0.15 =
+* [fix] fixed order meta box 
 
 = 1.0.14 =
 * [fix] added an exception to prevent meta cloning from subscriptions
