@@ -10,7 +10,7 @@
 					<img src="<?php echo esc_url(MRKV_REVIEW_REMINDER_IMG_URL . '/global/clock.svg'); ?>" alt="morkva Review Reminder" title="morkva Review Reminder">
 				</a>
 				<a href="<?php echo esc_url($current_page); ?>"><?php echo esc_html__('Global', 'mrkv-review-reminder'); ?></a>
-				<a class="admin_mrkv_ua_shipping_morkva-logo" href="https://morkva.co.ua/" target="blanc">
+				<a class="admin_mrkv_ua_shipping_morkva-logo" href="https://morkva.co.ua/" target="_blank">
 					<img src="<?php echo esc_url(MRKV_REVIEW_REMINDER_IMG_URL . '/global/morkva-logo.svg'); ?>" alt="morkva" title="morkva">
 				</a>
 			</div>
@@ -249,9 +249,9 @@
 						<img src="<?php echo esc_url(MRKV_REVIEW_REMINDER_IMG_URL . '/global/star.svg'); ?>" alt="Star" alt="Star">
 						<img src="<?php echo esc_url(MRKV_REVIEW_REMINDER_IMG_URL . '/global/star.svg'); ?>" alt="Star" alt="Star">
 						<?php echo esc_html__( 'review at', 'mrkv-review-reminder' ); ?>
-						<a href="https://wordpress.org/plugins/mrkv-review-reminder/" target="blanc">WordPress.org</a>
+						<a href="https://wordpress.org/plugins/mrkv-review-reminder/" target="_blank">WordPress.org</a>
 					</p>
-					<a class="button button-primary mrkv-btn-sidebar-main" href="https://wordpress.org/plugins/mrkv-review-reminder/" target="blanc">
+					<a class="button button-primary mrkv-btn-sidebar-main" href="https://wordpress.org/plugins/mrkv-review-reminder/" target="_blank">
 						<?php echo esc_html__( 'Leave', 'mrkv-review-reminder' ) . ' '; ?>
 						<img src="<?php echo esc_url(MRKV_REVIEW_REMINDER_IMG_URL . '/global/star.svg'); ?>" alt="Star" alt="Star">
 						<img src="<?php echo esc_url(MRKV_REVIEW_REMINDER_IMG_URL . '/global/star.svg'); ?>" alt="Star" alt="Star">
@@ -263,13 +263,13 @@
 						<?php echo esc_html__( 'Isn’t good enough for a 5', 'mrkv-review-reminder' ) . ' '; ?>
 						<img src="<?php echo esc_url(MRKV_REVIEW_REMINDER_IMG_URL . '/global/star.svg'); ?>" alt="Star" alt="Star">? 
 						<?php echo esc_html__( 'Contact us via the widget on our website, or check out', 'mrkv-review-reminder' ) . ' '; ?>
-						<a href="https://docs.morkva.co.ua/uk?utm_source=plugin&utm_medium=sidebar&utm_campaign=review_reminder_free" target="blanc"><?php echo esc_html__( 'documantation', 'mrkv-review-reminder' ); ?></a>
+						<a href="https://docs.morkva.co.ua/uk?utm_source=plugin&utm_medium=sidebar&utm_campaign=review_reminder_free" target="_blank"><?php echo esc_html__( 'documantation', 'mrkv-review-reminder' ); ?></a>
 					</p>
 					<div class="mrkv-btns-line-sidebar" style="display: flex;gap: 4px;">
-						<a class="button mrkv-btn-sidebar-black" href="https://morkva.co.ua/?utm_source=plugin&utm_medium=sidebar&utm_campaign=review_reminder_free" target="blanc">
+						<a class="button mrkv-btn-sidebar-black" href="https://morkva.co.ua/?utm_source=plugin&utm_medium=sidebar&utm_campaign=review_reminder_free" target="_blank">
 							<?php echo esc_html__( 'Go to the website', 'mrkv-review-reminder' ); ?>
 						</a>
-						<a class="button mrkv-btn-sidebar-black" href="https://docs.morkva.co.ua/uk?utm_source=plugin&utm_medium=sidebar&utm_campaign=review_reminder_free" target="blanc">
+						<a class="button mrkv-btn-sidebar-black" href="https://docs.morkva.co.ua/uk?utm_source=plugin&utm_medium=sidebar&utm_campaign=review_reminder_free" target="_blank">
 							<?php echo esc_html__( 'Documantation', 'mrkv-review-reminder' ); ?>
 						</a>
 					</div>
@@ -297,7 +297,7 @@
 						</li>
 						<li><?php echo esc_html__( 'and more', 'mrkv-review-reminder' ); ?></li>
 					</ul>
-					<a class="button button-primary mrkv-btn-sidebar-main" href="https://morkva.co.ua/shop/review-reminder-pro/?utm_source=plugin&utm_medium=sidebar&utm_campaign=review_reminder_free" target="blanc">
+					<a class="button button-primary mrkv-btn-sidebar-main" href="https://morkva.co.ua/shop/review-reminder-pro/?utm_source=plugin&utm_medium=sidebar&utm_campaign=review_reminder_free" target="_blank">
 						<?php echo esc_html__( 'Buy Pro-version', 'mrkv-review-reminder' ); ?>
 					</a>
 				</div>
@@ -306,17 +306,37 @@
 				<div class="admin_mrkv_ua_shipping__plugin__support">
 					<h2><?php echo esc_html__('Other free plugins', 'mrkv-review-reminder'); ?></h2>
 					<?php
-						$mrkv_review_reminder_response = wp_remote_get( 'https://morkva.co.ua/wp-json/pluginManagement/v2', array(
-							'headers' => array(
-							),
-							'timeout' => 30,
-							'redirection' => 5,
-							'httpversion' => '1.1',
-							'sslverify' => true
-						));
+						$mrkv_review_reminder_transient_key = 'morkva_plugin_management_data';
+						$mrkv_review_reminder_cached_data = get_transient( $mrkv_review_reminder_transient_key );
+						if ( false !== $mrkv_review_reminder_cached_data ) {
+							$mrkv_review_reminder_data = ( 'error' === $mrkv_review_reminder_cached_data ) ? false : $mrkv_review_reminder_cached_data;
+						} else {
+							
+							$mrkv_review_reminder_response = wp_remote_get( 'https://morkva.co.ua/wp-json/pluginManagementPro/v2', array(
+								'headers'     => array(),
+								'timeout'     => 6,
+								'redirection' => 5,
+								'httpversion' => '1.1',
+								'sslverify'   => true,
+							) );
 
-						$mrkv_review_reminder_response_data = $mrkv_review_reminder_response['body'] ? json_decode( $mrkv_review_reminder_response['body'], true ) : null;
-						$mrkv_review_reminder_plugins = $mrkv_review_reminder_response_data['plugins'] ?? [];
+							if ( is_wp_error( $mrkv_review_reminder_response ) || 200 !== wp_remote_retrieve_response_code( $mrkv_review_reminder_response ) ) {
+								set_transient( $mrkv_review_reminder_transient_key, 'error', HOUR_IN_SECONDS );
+								$mrkv_review_reminder_data = false;
+							} else {
+								$mrkv_review_reminder_body = wp_remote_retrieve_body( $mrkv_review_reminder_response );
+								$mrkv_review_reminder_data = json_decode( $mrkv_review_reminder_body, true );
+
+								if ( empty( $mrkv_review_reminder_data ) || ! is_array( $mrkv_review_reminder_data ) ) {
+									set_transient( $mrkv_review_reminder_transient_key, 'error', HOUR_IN_SECONDS );
+									$mrkv_review_reminder_data = false;
+								} else {
+									set_transient( $mrkv_review_reminder_transient_key, $mrkv_review_reminder_data, 12 * HOUR_IN_SECONDS );
+								}
+							}
+						}
+
+						$mrkv_review_reminder_plugins = ( is_array( $mrkv_review_reminder_data ) && isset( $mrkv_review_reminder_data['plugins'] ) ) ? $mrkv_review_reminder_data['plugins'] : [];
 
 						if(!empty($mrkv_review_reminder_plugins))
 						{
@@ -327,7 +347,7 @@
 										{
 											if($mrkv_review_reminder_plugin_slug == 'mrkv-review-reminder'){ continue; }
 											?>
-												<li><a style="display:block; margin-bottom:5px;" href="<?php echo esc_attr($mrkv_review_reminder_plugin_data['url'] ?? ''); ?>" target="blanc" class="plugin_line"><?php echo esc_attr($mrkv_review_reminder_plugin_data['label'] ?? ''); ?></a></li>
+												<li><a style="display:block; margin-bottom:5px;" href="<?php echo esc_attr($mrkv_review_reminder_plugin_data['url'] ?? ''); ?>" target="_blank" class="plugin_line"><?php echo esc_attr($mrkv_review_reminder_plugin_data['label'] ?? ''); ?></a></li>
 											<?php
 										}
 									?>
