@@ -37,7 +37,7 @@ if (!class_exists('MRKV_REVIEW_REMINDER_SENDER'))
 		{
 			# Set empty message
 			$message = '<div class="mrkv_review_reminder__order mrkv_review_reminder__send_old">
-				<div class="mrkv_review_reminder__order__send_manually" data-order-id="' . $order_id . '">
+				<div class="mrkv_review_reminder__order__send_manually" data-order-id="' . esc_attr($this->order->get_id()) . '" data-type="new">
 					<img src="' . MRKV_REVIEW_REMINDER_IMG_URL . '/global/letter-icon.svg' . '" alt="Email" title="Email">
 					' . __('Send now', 'mrkv-review-reminder') . '
 				</div>
@@ -115,6 +115,30 @@ if (!class_exists('MRKV_REVIEW_REMINDER_SENDER'))
 			$content = $this->convert_subject($content);
 			$content = $this->add_products_to_content($content, $sender, $content_header);
 
+			# Mark the order as sent BEFORE handing the mail over. If the request dies in
+			# wp_mail (SMTP timeout, fatal, cron respawn), the order must not stay in the
+			# queue - otherwise the next run sends the same reminder again.
+			$this->order->update_meta_data('mrkv_review-reminder_sent', '1');
+
+			$sent_date = json_decode($this->order->get_meta('mrkv_review-reminder_sent_date'), true);
+
+			# Guard against a corrupted / empty value, array_push on a non-array is fatal
+			if (!is_array($sent_date))
+			{
+				$sent_date = array();
+			}
+
+			# Add sent date
+			array_push($sent_date, gmdate('Y-m-d H:i:s'));
+			$this->order->update_meta_data('mrkv_review-reminder_sent_date', wp_json_encode($sent_date));
+
+			if(isset($this->mrkv_review_reminder['log']['order']) && $this->mrkv_review_reminder['log']['order'] == 'on')
+			{
+				$this->order->add_order_note('Sent: ' . gmdate('Y-m-d'), 0, false);
+			}
+
+			$this->order->save();
+
 			# Change mail from name
 			add_filter('wp_mail_from_name', array($this, 'mrkv_review_reminder_new_from'));
 
@@ -129,29 +153,6 @@ if (!class_exists('MRKV_REVIEW_REMINDER_SENDER'))
 
 			# Send email
 			wp_mail( $email, $subject, $content, $headers );
-
-			$this->order->update_meta_data('mrkv_review-reminder_sent', '1');
-
-			if($this->order->get_meta('mrkv_review-reminder_sent_date'))
-			{
-				# Add sent date
-				$sent_date = json_decode($this->order->get_meta('mrkv_review-reminder_sent_date'), true);
-				array_push($sent_date, gmdate('Y-m-d H:i:s'));
-				$this->order->update_meta_data('mrkv_review-reminder_sent_date', wp_json_encode($sent_date));
-			}
-			else
-			{
-				# Add sent date
-				$sent_date = array(gmdate('Y-m-d H:i:s'));
-				$this->order->update_meta_data('mrkv_review-reminder_sent_date', wp_json_encode($sent_date));				
-			}
-
-			if(isset($this->mrkv_review_reminder['log']['order']) && $this->mrkv_review_reminder['log']['order'] == 'on')
-			{
-				$this->order->add_order_note('Sent: ' . gmdate('Y-m-d'), $is_customer_note = 0, $added_by_user = false);
-			}
-			
-			$this->order->save();
 
 			# Return success message
 			return $message_result;
