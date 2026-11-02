@@ -15,17 +15,33 @@ if (!class_exists('MRKV_REVIEW_REMINDER_WOO_AJAX'))
 		 * */
 		function __construct()
 		{
+			# All three handlers are admin-only actions, so no wp_ajax_nopriv_* here
+
 			# Sending ajax reminder
 			add_action( 'wp_ajax_mrkv_review_reminder_sent', array($this, 'mrkv_review_reminder_sending_func') );
-			add_action( 'wp_ajax_nopriv_mrkv_review_reminder_sent', array($this, 'mrkv_review_reminder_sending_func') );
 
 			# Remove ajax reminder
 			add_action( 'wp_ajax_mrkv_review_reminder_remove', array($this, 'mrkv_review_reminder_remove_func') );
-			add_action( 'wp_ajax_nopriv_mrkv_review_reminder_remove', array($this, 'mrkv_review_reminder_remove_func') );
 
 			# Test ajax reminder
 			add_action( 'wp_ajax_mrkv_review_reminder_test_send', array($this, 'mrkv_review_reminder_test_send_func') );
-			add_action( 'wp_ajax_nopriv_mrkv_review_reminder_test_send', array($this, 'mrkv_review_reminder_test_send_func') );
+		}
+
+		/**
+		 * Nonce + capability guard shared by all handlers
+		 * @var string Capability
+		 * @return bool Answer
+		 * */
+		private function mrkv_review_reminder_can_run($capability)
+		{
+			# Check nonce
+			if ( ! isset( $_POST['nonce'] ) || ! wp_verify_nonce( sanitize_text_field(wp_unslash($_POST['nonce'])), 'mrkv_review_reminder_sent_nonce' ) )
+			{
+				return false;
+			}
+
+			# Check capability
+			return current_user_can($capability);
 		}
 
 		/**
@@ -33,8 +49,8 @@ if (!class_exists('MRKV_REVIEW_REMINDER_WOO_AJAX'))
 		 * */
 		public function mrkv_review_reminder_sending_func()
 		{
-			# Check nonce
-			if ( ! isset( $_POST['nonce'] ) || ! wp_verify_nonce( sanitize_text_field(wp_unslash($_POST['nonce'])), 'mrkv_review_reminder_sent_nonce' ) ) 
+			# Check nonce + capability
+			if ( ! $this->mrkv_review_reminder_can_run('edit_shop_orders') ) 
 			{
 				# Stop job
 		        wp_die();
@@ -86,8 +102,8 @@ if (!class_exists('MRKV_REVIEW_REMINDER_WOO_AJAX'))
 
 		public function mrkv_review_reminder_remove_func()
 		{
-			# Check nonce
-			if ( ! isset( $_POST['nonce'] ) || ! wp_verify_nonce( sanitize_text_field(wp_unslash($_POST['nonce'])), 'mrkv_review_reminder_sent_nonce' ) ) 
+			# Check nonce + capability
+			if ( ! $this->mrkv_review_reminder_can_run('edit_shop_orders') ) 
 			{
 				# Stop job
 		        wp_die();
@@ -144,8 +160,8 @@ if (!class_exists('MRKV_REVIEW_REMINDER_WOO_AJAX'))
 		 * */
 		public function mrkv_review_reminder_test_send_func()
 		{
-			# Check nonce
-			if ( ! isset( $_POST['nonce'] ) || ! wp_verify_nonce( sanitize_text_field(wp_unslash($_POST['nonce'])), 'mrkv_review_reminder_sent_nonce' ) ) 
+			# Check nonce + capability
+			if ( ! $this->mrkv_review_reminder_can_run('manage_woocommerce') ) 
 			{
 				wp_die();
 			}
