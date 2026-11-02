@@ -26,6 +26,10 @@ if (!class_exists('MRKV_REVIEW_REMINDER_WOO_ORDER'))
 			add_action( 'woocommerce_payment_complete', array( $this, 'mrkv_review_reminder_add_meta' ), 10, 1 );
 			add_filter( 'wc_subscriptions_renewal_order_data', array( $this, 'mrkv_review_reminder_exclude_from_meta_copy' ), 10, 1 );
             add_filter( 'wcs_resubscribe_order_meta', array( $this, 'mrkv_review_reminder_exclude_from_meta_copy' ), 10, 1 );
+			# WCS copies meta through 'wc_subscriptions_{type}_data' with HPOS on and the legacy
+			# 'wcs_{type}_meta' with HPOS off - hook both for renewals and resubscribes
+			add_filter( 'wcs_renewal_order_meta', array( $this, 'mrkv_review_reminder_exclude_from_meta_copy' ), 10, 1 );
+			add_filter( 'wc_subscriptions_resubscribe_order_data', array( $this, 'mrkv_review_reminder_exclude_from_meta_copy' ), 10, 1 );
 		}
 
 		public function mrkv_review_reminder_exclude_from_meta_copy($meta)

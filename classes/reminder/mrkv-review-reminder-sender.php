@@ -293,7 +293,7 @@ if (!class_exists('MRKV_REVIEW_REMINDER_SENDER'))
 			{
 				$header_mail = '<div id="template_header_image">
 			        <p style="margin-top:0; margin-bottom: 20px;">
-			            <img src="' . esc_url( $header_image ) . '" alt="' . bloginfo( 'name' ) . '" />
+			            <img src="' . esc_url( $header_image ) . '" alt="' . esc_attr( get_bloginfo( 'name' ) ) . '" />
 			        </p>
 			    </div>';
 			}

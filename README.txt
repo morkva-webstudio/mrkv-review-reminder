@@ -4,7 +4,7 @@ Tags: order, review, rating
 Requires at least: 6.0
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.0.17
+Stable tag: 1.1.0
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -53,6 +53,10 @@ Sure, just drop us a line at: support@morkva.co.ua
 
 
 == Changelog ==
+
+= 1.1.0 =
+* [fix] the header image alt is now the site name; the email no longer prints the site name to the page or the cron output
+* [fix] reminder data is not copied to renewal and resubscribe orders of WooCommerce Subscriptions in all storage modes (HPOS on and off)
 
 = 1.0.17 =
 * [fix] fixed gettings orders 
